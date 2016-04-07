@@ -1,0 +1,23 @@
+Instructions to deploy
+
+1. write app
+
+2. make sure docker image is running (am i using the right terminology)
+    boot2docker status
+    if needed,
+>    boot2docker down; boot2docker download; boot2docker up
+    other useful ones are boot2docker destroy, boot2docker ssh, and i think boot2docker stop is a synonym for 'down'
+
+3. run the following: 
+>   export DOCKER_TLS_VERIFY=1; export DOCKER_HOST=tcp://192.168.59.103:2376; export DOCKER_CERT_PATH=/Users/ankeet/.boot2docker/certs/boot2docker-vm
+
+(in all honesty the boot2docker stuff should all be scripted away somewhere but i'll do that when it bothers me enough)
+
+4. cd into this directory
+
+5. run
+
+>   docker run --rm -it -v $(pwd):/source schickling/rust
+
+in theory you should be able to append "cargo build" to that last command to have it build right away (and maybe even run it from there) but we'll cross that bridge when the signal says flood
+

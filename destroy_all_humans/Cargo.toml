@@ -1,0 +1,4 @@
+[package]
+name = "destroy_all_humans"
+version = "0.1.0"
+authors = ["Ankeet Presswala <mythic.boost@gmail.com>"]

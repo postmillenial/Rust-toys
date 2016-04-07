@@ -1,0 +1,4 @@
+[package]
+name = "russian_roulette"
+version = "0.1.0"
+authors = ["Ankeet Presswala <fiyarburst@gmail.com>"]
